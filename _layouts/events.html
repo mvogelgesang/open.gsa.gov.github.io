@@ -80,7 +80,16 @@
             {{ content }}
           </div>
         </article>
-        <div class="row">&nbsp;</div>
+        <div class="row">
+          {% assign tagsize = page.tags.size %}{% if tagsize != 0 %}
+          <h4>Tags</h4>
+
+          {% for tag in page.tags %}<button class="hollow small button" href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</button>{% unless forloop.last %}&nbsp;&comma;&nbsp;{% endunless %}{% endfor %}{% endif %}
+        </div>
+
+        <div class="row">
+          <h3><a href="mailto: {{page.contactemail}} ">Contact Us! <i class="fa fa-envelope-o fa-2"></i></a></h3>
+        </div>
     </div>
     <div class="cf"></div>
     {% if site.share %}{% include share.html %}{% endif %}
