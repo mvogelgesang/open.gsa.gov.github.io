@@ -1,0 +1,62 @@
+---
+layout: page
+title: "APIs and Developer Tools"
+---
+
+<div class="row">
+	<div class="small-12 medium-8 columns">
+		<p>GSA's web services cover a range of important data and functionality. Software developers and researchers can use these resources to help people find useful government information.<br/><br />
+
+		May of our APIs are themselves open sourced and we always <a href="https://github.com/GSA/GSA-APIs/issues">Welcome feedback</a>. If you have any questions or ideas for how we can improve our APIs, don't hesitate to let us know.
+		</p>
+		<ul>
+      <li>
+        <a href="https://github.com/GSA/GSA-APIs/issues">Feedback</a>
+      </li>
+      <li>
+        <a href="http://gsa.gov/portal/content/162631">
+            View our Developer Terms of Service
+        </a>
+      </li>
+  	</ul>
+	</div>
+	<div class="small-12 medium-4 columns">
+		<h3>Other Developer Hubs</h3>
+		<ul class="sidebar_list nav-list">
+			{% for hub in site.data.highlighteddeveloperhubs %}
+      <li class="sidebar_list_item">
+        <h5 class="sidebar_list_item_head"><a href="{{ hub.link }}">{{ hub.name }}</a>
+        </h5>
+      </li>
+      {% endfor %}
+    </ul>
+	</div>	
+</div>
+<div class="row">
+	<h2>Featured APIs</h2>
+</div>
+<div class="row">
+	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+	{% for api in site.data.featuredApis %}
+  	<li>
+		  <a href="{{ api.link }}">
+			  <h3>{{ api.name }}</h3>
+			</a>
+			<p>{{ api.description }}</p>
+		</li>
+	{% endfor %}
+	</ul>
+</div>
+<div class="row">
+	<h2>Highlighted Repositories</h2>
+	<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+		{% for highlight in site.data.highlightedrepos %}
+		<li>
+		  <a href="{{ highlight.link }}">
+			  <h3>{{ highlight.name }}</h3>
+			</a>
+			<p>{{ highlight.description }}</p>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
