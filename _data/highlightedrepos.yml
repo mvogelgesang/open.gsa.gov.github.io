@@ -1,0 +1,11 @@
+- name: data.gov
+  link: https://github.com/GSA/data.gov
+  description: The CKAN-based data catalog for the federal government.
+
+- name: sam_api
+  link: https://github.com/GSA/sam_api
+  description: API access to the System for Award Management
+
+- name: unclaimed_money
+  link: https://github.com/GSA/unclaimed_money
+  description: US Government unclaimed money metasearch tool.
